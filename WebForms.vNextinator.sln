@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{284A72CE-7936-4A3C-8B01-F27B532F7425}"
+	ProjectSection(SolutionItems) = preProject
+		build.bat = build.bat
+		Build.fsx = Build.fsx
+		WebForms.vNextinator.nuspec = WebForms.vNextinator.nuspec
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebForms.vNextinator.Net20", "Src\WebForms.vNextinator.Net20\WebForms.vNextinator.Net20.csproj", "{AB47C848-139C-4120-AD73-9570BA612160}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebForms.vNextinator.Net35", "Src\WebForms.vNextinator.Net35\WebForms.vNextinator.Net35.csproj", "{16AB937C-58B7-41EB-806E-2101894D8BB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebForms.vNextinator.Net40", "Src\WebForms.vNextinator.Net40\WebForms.vNextinator.Net40.csproj", "{C92237FF-8875-47F9-86ED-9C0C6CF6CCA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebForms.vNextinator.Net45", "Src\WebForms.vNextinator.Net45\WebForms.vNextinator.Net45.csproj", "{1AA18AD4-ED25-4220-B504-E62104855800}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB47C848-139C-4120-AD73-9570BA612160}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB47C848-139C-4120-AD73-9570BA612160}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB47C848-139C-4120-AD73-9570BA612160}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB47C848-139C-4120-AD73-9570BA612160}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16AB937C-58B7-41EB-806E-2101894D8BB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16AB937C-58B7-41EB-806E-2101894D8BB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16AB937C-58B7-41EB-806E-2101894D8BB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16AB937C-58B7-41EB-806E-2101894D8BB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C92237FF-8875-47F9-86ED-9C0C6CF6CCA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C92237FF-8875-47F9-86ED-9C0C6CF6CCA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C92237FF-8875-47F9-86ED-9C0C6CF6CCA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C92237FF-8875-47F9-86ED-9C0C6CF6CCA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AA18AD4-ED25-4220-B504-E62104855800}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AA18AD4-ED25-4220-B504-E62104855800}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AA18AD4-ED25-4220-B504-E62104855800}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AA18AD4-ED25-4220-B504-E62104855800}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
