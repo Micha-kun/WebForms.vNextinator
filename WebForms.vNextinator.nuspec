@@ -13,6 +13,7 @@
     <releaseNotes>@releaseNotes@</releaseNotes>
     <copyright>Copyright GitHub 2015</copyright>    
     <tags>WebForms vNextinator</tags>
+    @dependencies@
   </metadata>
   @files@
 </package>

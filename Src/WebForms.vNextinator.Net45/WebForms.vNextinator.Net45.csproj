@@ -33,6 +33,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,6 +44,13 @@
   <ItemGroup>
     <Compile Include="..\WebForms.vNextinator.Net20\ControlFinder.cs">
       <Link>ControlFinder.cs</Link>
+    </Compile>
+    <Compile Include="..\WebForms.vNextinator.Net35\HttpTaskHandler.cs">
+      <Link>HttpTaskHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\WebForms.vNextinator.Net35\ScriptUserControl.cs">
+      <Link>ScriptUserControl.cs</Link>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
