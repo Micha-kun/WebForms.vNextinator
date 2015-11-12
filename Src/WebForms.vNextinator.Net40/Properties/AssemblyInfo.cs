@@ -7,11 +7,11 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescriptionAttribute("The future of WebForms is here!!")]
 [assembly: GuidAttribute("c92237ff-8875-47f9-86ed-9c0c6cf6cca2")]
 [assembly: AssemblyProductAttribute("WebForms.vNextinator")]
-[assembly: AssemblyVersionAttribute("0.2.0")]
-[assembly: AssemblyFileVersionAttribute("0.2.0")]
+[assembly: AssemblyVersionAttribute("0.3.0")]
+[assembly: AssemblyFileVersionAttribute("0.3.0")]
 [assembly: CLSCompliantAttribute(true)]
 namespace System {
     internal static class AssemblyVersionInformation {
-        internal const string Version = "0.2.0";
+        internal const string Version = "0.3.0";
     }
 }

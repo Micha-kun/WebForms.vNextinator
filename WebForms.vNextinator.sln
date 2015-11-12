@@ -7,6 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{284A72CE
 	ProjectSection(SolutionItems) = preProject
 		build.bat = build.bat
 		Build.fsx = Build.fsx
+		build\web.config.transform = build\web.config.transform
 		WebForms.vNextinator.nuspec = WebForms.vNextinator.nuspec
 	EndProjectSection
 EndProject
@@ -17,6 +18,14 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebForms.vNextinator.Net40", "Src\WebForms.vNextinator.Net40\WebForms.vNextinator.Net40.csproj", "{C92237FF-8875-47F9-86ED-9C0C6CF6CCA2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebForms.vNextinator.Net45", "Src\WebForms.vNextinator.Net45\WebForms.vNextinator.Net45.csproj", "{1AA18AD4-ED25-4220-B504-E62104855800}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Net20", "Net20", "{0340640F-FDEC-4107-9061-0862265E6598}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Net35", "Net35", "{EE1D08B3-BE40-44C3-895F-B4887994177C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Net40", "Net40", "{37013ACE-5D8F-4C0F-B39F-5DBB9FDF899B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Net45", "Net45", "{EE59B510-9109-44B1-B63F-8B35D9642676}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,5 +52,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0340640F-FDEC-4107-9061-0862265E6598} = {284A72CE-7936-4A3C-8B01-F27B532F7425}
+		{EE1D08B3-BE40-44C3-895F-B4887994177C} = {284A72CE-7936-4A3C-8B01-F27B532F7425}
+		{37013ACE-5D8F-4C0F-B39F-5DBB9FDF899B} = {284A72CE-7936-4A3C-8B01-F27B532F7425}
+		{EE59B510-9109-44B1-B63F-8B35D9642676} = {284A72CE-7936-4A3C-8B01-F27B532F7425}
 	EndGlobalSection
 EndGlobal

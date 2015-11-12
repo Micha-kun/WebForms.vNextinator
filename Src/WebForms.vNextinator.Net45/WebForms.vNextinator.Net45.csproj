@@ -51,6 +51,9 @@
     <Compile Include="..\WebForms.vNextinator.Net20\DependencyInjectedPageHandlerFactory.cs">
       <Link>DependencyInjectedPageHandlerFactory.cs</Link>
     </Compile>
+    <Compile Include="..\WebForms.vNextinator.Net20\DependencyInjectionModule.cs">
+      <Link>DependencyInjectionModule.cs</Link>
+    </Compile>
     <Compile Include="..\WebForms.vNextinator.Net20\DependencyResolver.cs">
       <Link>DependencyResolver.cs</Link>
     </Compile>
@@ -62,6 +65,9 @@
     </Compile>
     <Compile Include="..\WebForms.vNextinator.Net35\HttpTaskHandler.cs">
       <Link>HttpTaskHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\WebForms.vNextinator.Net35\PageDataSource.cs">
+      <Link>PageDataSource.cs</Link>
     </Compile>
     <Compile Include="..\WebForms.vNextinator.Net35\ScriptUserControl.cs">
       <Link>ScriptUserControl.cs</Link>

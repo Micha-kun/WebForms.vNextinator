@@ -54,6 +54,9 @@
     <Compile Include="..\WebForms.vNextinator.Net20\DependencyInjectedPageHandlerFactory.cs">
       <Link>DependencyInjectedPageHandlerFactory.cs</Link>
     </Compile>
+    <Compile Include="..\WebForms.vNextinator.Net20\DependencyInjectionModule.cs">
+      <Link>DependencyInjectionModule.cs</Link>
+    </Compile>
     <Compile Include="..\WebForms.vNextinator.Net20\DependencyResolver.cs">
       <Link>DependencyResolver.cs</Link>
     </Compile>
@@ -64,6 +67,7 @@
       <Link>TemplateClassDependencyInjector.cs</Link>
     </Compile>
     <Compile Include="HttpTaskHandler.cs" />
+    <Compile Include="PageDataSource.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ScriptUserControl.cs">
       <SubType>ASPXCodeBehind</SubType>

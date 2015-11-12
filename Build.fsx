@@ -11,7 +11,7 @@ let packagingDir = packagingRoot @@ "lib"
 let authors = ["Michael-Jorge Gómez Campos"]
 let projectName = "WebForms.vNextinator"
 let projectDescription= "The future of WebForms is here!!"
-let projectVersion = "0.2.0"
+let projectVersion = "0.3.0"
 let projectSummary = projectVersion
 
 // Targets
@@ -104,7 +104,9 @@ Target "CreatePackage" (fun _ ->
                  ("Net40/WebForms.vNextinator.dll", Some "lib/net40/WebForms.vNextinator.dll", None)
                  ("Net40/WebForms.vNextinator.PDB", Some "lib/net40/WebForms.vNextinator.PDB", None)
                  ("Net45/WebForms.vNextinator.dll", Some "lib/net45/WebForms.vNextinator.dll", None)
-                 ("Net45/WebForms.vNextinator.PDB", Some "lib/net45/WebForms.vNextinator.PDB", None)]})
+                 ("Net45/WebForms.vNextinator.PDB", Some "lib/net45/WebForms.vNextinator.PDB", None)
+                 ("web.config.transform", Some "content/web.config.transform", None)]
+        })
             "WebForms.vNextinator.nuspec"
 )
 
