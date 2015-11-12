@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection;
 using System.Web;
 using System.Web.UI;
 
@@ -26,6 +27,8 @@ namespace WebForms.vNextinator
 
         private void InitializeChildControls(object sender, EventArgs e)
         {
+            var flags =
+            BindingFlags.Instance | BindingFlags.NonPublic;
             var queue = new Queue<TemplateControl>();
             var page = (Page)sender;
             if (page.Master != null)
@@ -38,13 +41,17 @@ namespace WebForms.vNextinator
             while (queue.Count > 0)
             {
                 var control = queue.Dequeue();
-                foreach (Control ctrl in control.Controls)
+                foreach (var field in control.GetType().GetFields(flags))
                 {
-                    var templateControl = ctrl as TemplateControl;
-                    if (templateControl != null)
+                    var type = field.FieldType;
+                    if (typeof(UserControl).IsAssignableFrom(type))
                     {
-                        TemplateClassDependencyInjector.InjectDependency(templateControl);
-                        queue.Enqueue(templateControl);
+                        var userControl = field.GetValue(control) as UserControl;
+                        if (userControl != null)
+                        {
+                            TemplateClassDependencyInjector.InjectDependency(userControl);
+                            queue.Enqueue(userControl);
+                        }
                     }
                 }
             }

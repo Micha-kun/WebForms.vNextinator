@@ -19,6 +19,10 @@ Target "BuildClean" (fun _ ->
     CleanDir buildDir
 )
 
+Target "CopyWebConfigTransform" (fun _ ->
+    CopyFileIntoSubFolder buildDir "web.config.transform"
+)
+
 Target "BuildNet20Project" (fun _ ->
     CreateCSharpAssemblyInfo "Src/WebForms.vNextinator.Net20/Properties/AssemblyInfo.cs"
         [Attribute.Title projectName
@@ -93,7 +97,10 @@ Target "CreatePackage" (fun _ ->
             AccessKey = getBuildParamOrDefault "nugetkey" ""
             Publish = hasBuildParam "nugetKey"
             DependenciesByFramework = 
-                [ {Dependencies = [("TaskParallelLibrary","1.0.2856.0")]; FrameworkVersion = "net35"}]
+                [ 
+                    {Dependencies = [("TaskParallelLibrary","1.0.2856.0")]; FrameworkVersion = "net35"}
+                    {Dependencies = []; FrameworkVersion = "net40"}
+                ]
             FrameworkAssemblies = 
                 [{FrameworkVersions = []; AssemblyName = "System.Web"}]
             Files = 
@@ -116,6 +123,7 @@ Target "Default" (fun _ ->
 
 // Dependencies
 "BuildClean"
+  ==> "CopyWebConfigTransform"
   ==> "BuildNet20Project"
   ==> "BuildNet35Project"
   ==> "BuildNet40Project"

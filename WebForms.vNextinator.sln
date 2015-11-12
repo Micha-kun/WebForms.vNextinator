@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{284A72CE
 	ProjectSection(SolutionItems) = preProject
 		build.bat = build.bat
 		Build.fsx = Build.fsx
-		build\web.config.transform = build\web.config.transform
+		web.config.transform = web.config.transform
 		WebForms.vNextinator.nuspec = WebForms.vNextinator.nuspec
 	EndProjectSection
 EndProject
@@ -26,6 +26,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Net40", "Net40", "{37013ACE-5D8F-4C0F-B39F-5DBB9FDF899B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Net45", "Net45", "{EE59B510-9109-44B1-B63F-8B35D9642676}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{3702D721-F5C3-43F7-88A7-58A48EC857C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperControlTest", "Samples\SuperControlTest\SuperControlTest.csproj", "{CA994DD9-3CC7-43C4-AFCA-21B827BE5E94}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +53,10 @@ Global
 		{1AA18AD4-ED25-4220-B504-E62104855800}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1AA18AD4-ED25-4220-B504-E62104855800}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1AA18AD4-ED25-4220-B504-E62104855800}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA994DD9-3CC7-43C4-AFCA-21B827BE5E94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA994DD9-3CC7-43C4-AFCA-21B827BE5E94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA994DD9-3CC7-43C4-AFCA-21B827BE5E94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA994DD9-3CC7-43C4-AFCA-21B827BE5E94}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,5 +66,6 @@ Global
 		{EE1D08B3-BE40-44C3-895F-B4887994177C} = {284A72CE-7936-4A3C-8B01-F27B532F7425}
 		{37013ACE-5D8F-4C0F-B39F-5DBB9FDF899B} = {284A72CE-7936-4A3C-8B01-F27B532F7425}
 		{EE59B510-9109-44B1-B63F-8B35D9642676} = {284A72CE-7936-4A3C-8B01-F27B532F7425}
+		{CA994DD9-3CC7-43C4-AFCA-21B827BE5E94} = {3702D721-F5C3-43F7-88A7-58A48EC857C7}
 	EndGlobalSection
 EndGlobal

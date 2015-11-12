@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web.Http;
 using System.Web.UI;
@@ -8,6 +9,15 @@ namespace SuperControlTest.Controls
 {
     public partial class SuperControl : UserControl, IScriptControl
     {
+        public SuperControl()
+        {
+        }
+
+        public SuperControl(InjectionTest test)
+        {
+            Debug.Assert(test != null);
+        }
+
         #region IScriptControl Crap
         IEnumerable<ScriptDescriptor> IScriptControl.GetScriptDescriptors()
         {
