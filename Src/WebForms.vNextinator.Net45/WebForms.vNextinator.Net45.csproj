@@ -45,6 +45,21 @@
     <Compile Include="..\WebForms.vNextinator.Net20\ControlFinder.cs">
       <Link>ControlFinder.cs</Link>
     </Compile>
+    <Compile Include="..\WebForms.vNextinator.Net20\DefaultDependencyResolver.cs">
+      <Link>DefaultDependencyResolver.cs</Link>
+    </Compile>
+    <Compile Include="..\WebForms.vNextinator.Net20\DependencyInjectedPageHandlerFactory.cs">
+      <Link>DependencyInjectedPageHandlerFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\WebForms.vNextinator.Net20\DependencyResolver.cs">
+      <Link>DependencyResolver.cs</Link>
+    </Compile>
+    <Compile Include="..\WebForms.vNextinator.Net20\IDependencyResolver.cs">
+      <Link>IDependencyResolver.cs</Link>
+    </Compile>
+    <Compile Include="..\WebForms.vNextinator.Net20\TemplateClassDependencyInjector.cs">
+      <Link>TemplateClassDependencyInjector.cs</Link>
+    </Compile>
     <Compile Include="..\WebForms.vNextinator.Net35\HttpTaskHandler.cs">
       <Link>HttpTaskHandler.cs</Link>
     </Compile>

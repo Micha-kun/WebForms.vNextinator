@@ -37,8 +37,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ControlFinder.cs" />
+    <Compile Include="DefaultDependencyResolver.cs" />
+    <Compile Include="DependencyInjectedPageHandlerFactory.cs" />
+    <Compile Include="DependencyResolver.cs" />
+    <Compile Include="IDependencyResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SystemHelpers.cs" />
+    <Compile Include="TemplateClassDependencyInjector.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
