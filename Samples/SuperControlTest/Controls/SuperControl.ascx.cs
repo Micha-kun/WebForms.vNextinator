@@ -4,10 +4,11 @@ using System.Diagnostics;
 using System.Linq;
 using System.Web.Http;
 using System.Web.UI;
+using WebForms.vNextinator;
 
 namespace SuperControlTest.Controls
 {
-    public partial class SuperControl : UserControl, IScriptControl
+    public partial class SuperControl : ScriptUserControl
     {
         public SuperControl()
         {
@@ -18,48 +19,10 @@ namespace SuperControlTest.Controls
             Debug.Assert(test != null);
         }
 
-        #region IScriptControl Crap
-        IEnumerable<ScriptDescriptor> IScriptControl.GetScriptDescriptors()
-        {
-            return Enumerable.Empty<ScriptDescriptor>();
-        }
-
-        IEnumerable<ScriptReference> IScriptControl.GetScriptReferences()
-        {
-            return GetScriptReferences();
-        }
-
-        protected override void OnPreRender(EventArgs e)
-        {
-            if (!this.DesignMode)
-            {
-                var sm = ScriptManager.GetCurrent(Page);
-                if (sm == null)
-                {
-                    throw new InvalidOperationException("ScriptManager control is required on Page");
-                }
-
-                sm.RegisterScriptControl(this);
-            }
-
-            base.OnPreRender(e);
-        }
-
-        protected override void Render(HtmlTextWriter writer)
-        {
-            if (!DesignMode)
-            {
-                var sm = ScriptManager.GetCurrent(Page);
-                sm.RegisterScriptDescriptors(this);
-            }
-            base.Render(writer);
-        }
-
-        private IEnumerable<ScriptReference> GetScriptReferences()
+        protected override IEnumerable<ScriptReference> GetScriptReferences()
         {
             yield return new ScriptReference("~/Controls/SuperControl.js");
         }
-        #endregion
 
         #region It's Magic!!
 
