@@ -38,7 +38,6 @@
   <ItemGroup>
     <Compile Include="ControlFinder.cs" />
     <Compile Include="DefaultDependencyResolver.cs" />
-    <Compile Include="DependencyInjectedPageHandlerFactory.cs" />
     <Compile Include="DependencyInjectionModule.cs" />
     <Compile Include="DependencyResolver.cs" />
     <Compile Include="IDependencyResolver.cs" />

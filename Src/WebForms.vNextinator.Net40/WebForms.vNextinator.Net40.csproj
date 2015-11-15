@@ -47,9 +47,6 @@
     <Compile Include="..\WebForms.vNextinator.Net20\DefaultDependencyResolver.cs">
       <Link>DefaultDependencyResolver.cs</Link>
     </Compile>
-    <Compile Include="..\WebForms.vNextinator.Net20\DependencyInjectedPageHandlerFactory.cs">
-      <Link>DependencyInjectedPageHandlerFactory.cs</Link>
-    </Compile>
     <Compile Include="..\WebForms.vNextinator.Net20\DependencyInjectionModule.cs">
       <Link>DependencyInjectionModule.cs</Link>
     </Compile>

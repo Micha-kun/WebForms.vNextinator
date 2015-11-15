@@ -1,16 +1,15 @@
 ﻿using SuperControlTest.Controls;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using WebForms.vNextinator;
 
 namespace SuperControlTest
 {
-    public class InjectionTest
+    public interface IInjectionTest
+    {
+    }
+
+    public class InjectionTest : IInjectionTest
     {
 
     }
@@ -21,7 +20,7 @@ namespace SuperControlTest
         {
         }
 
-        public Default(InjectionTest test) : this()
+        public Default(IInjectionTest test) : this()
         {
             Debug.Assert(test != null);
         }
