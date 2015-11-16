@@ -60,6 +60,36 @@
     <Compile Include="..\WebForms.vNextinator.Net20\IDependencyResolver.cs">
       <Link>IDependencyResolver.cs</Link>
     </Compile>
+    <Compile Include="..\WebForms.vNextinator.Net20\Mvpvm\IPresenter.cs">
+      <Link>Mvpvm\IPresenter.cs</Link>
+    </Compile>
+    <Compile Include="..\WebForms.vNextinator.Net20\Mvpvm\IViewModel.cs">
+      <Link>Mvpvm\IViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\WebForms.vNextinator.Net20\Mvpvm\MasterPageView.cs">
+      <Link>Mvpvm\MasterPageView.cs</Link>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\WebForms.vNextinator.Net20\Mvpvm\NotifyPropertyChangedEventMapper.cs">
+      <Link>Mvpvm\NotifyPropertyChangedEventMapper.cs</Link>
+    </Compile>
+    <Compile Include="..\WebForms.vNextinator.Net20\Mvpvm\PageView.cs">
+      <Link>Mvpvm\PageView.cs</Link>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\WebForms.vNextinator.Net20\Mvpvm\Presenter.cs">
+      <Link>Mvpvm\Presenter.cs</Link>
+    </Compile>
+    <Compile Include="..\WebForms.vNextinator.Net20\Mvpvm\PropertyChangedHandlerAttribute.cs">
+      <Link>Mvpvm\PropertyChangedHandlerAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\WebForms.vNextinator.Net20\Mvpvm\UserControlView.cs">
+      <Link>Mvpvm\UserControlView.cs</Link>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\WebForms.vNextinator.Net20\Mvpvm\ViewModel.cs">
+      <Link>Mvpvm\ViewModel.cs</Link>
+    </Compile>
     <Compile Include="..\WebForms.vNextinator.Net20\TemplateClassDependencyInjector.cs">
       <Link>TemplateClassDependencyInjector.cs</Link>
     </Compile>
