@@ -24,7 +24,17 @@ namespace SuperControlTest
                 );
             });
 
+            //Ninject depencency resolver
             DependencyResolver.SetDependencyResolver(new NinjectDependencyResolver());
+
+            /* Unity dependency resolver. Allows to decouple configuration from Resolver. You can reuse UnityDependentyResolver
+             * and configure it in each app without touching it.
+            DependencyResolver.SetDependencyResolver(UnityDependencyResolver.configureAndGet(container =>
+            {
+                container.RegisterType<IInjectionTest, InjectionTest>();
+                // container.RegisterType<AnotherIface, AnotherClass>();
+                //and so on...
+            })); */
         }
     }
 }
