@@ -41,10 +41,26 @@
     <Compile Include="DependencyInjectionModule.cs" />
     <Compile Include="DependencyResolver.cs" />
     <Compile Include="IDependencyResolver.cs" />
+    <Compile Include="Mvpvm\IPresenter.cs" />
+    <Compile Include="Mvpvm\IViewModel.cs" />
+    <Compile Include="Mvpvm\MasterPageView.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mvpvm\NotifyPropertyChangedEventMapper.cs" />
+    <Compile Include="Mvpvm\PageView.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mvpvm\Presenter.cs" />
+    <Compile Include="Mvpvm\PropertyChangedHandlerAttribute.cs" />
+    <Compile Include="Mvpvm\UserControlView.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mvpvm\ViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SystemHelpers.cs" />
     <Compile Include="TemplateClassDependencyInjector.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

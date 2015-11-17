@@ -1,5 +1,6 @@
 ﻿
 using Ninject;
+using SuperControlTest.Presenters;
 using System;
 using System.Collections.Generic;
 using WebForms.vNextinator;
@@ -29,6 +30,7 @@ namespace SuperControlTest.DI
         private void AddBindings()
         {
             _kernel.Bind<IInjectionTest>().To<InjectionTest>();
+            _kernel.Bind<IDefaultPresenter>().To<DefaultPresenter>();
         }
     }
 }
