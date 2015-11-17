@@ -1,4 +1,4 @@
-﻿using Microsoft.Practices.Unity;
+using Microsoft.Practices.Unity;
 using System;
 using System.Collections.Generic;
 using WebForms.vNextinator;
@@ -11,27 +11,27 @@ namespace SuperControlTest.DI
     /// </summary>
     public sealed class UnityDependencyResolver : IDependencyResolver
     {
-        private IUnityContainer container;
+        private readonly IUnityContainer _container;
 
         private UnityDependencyResolver()
         {
-            container = new UnityContainer();
+            _container = new UnityContainer();
         }
 
         public object GetService(Type serviceType)
         {
-            return container.Resolve(serviceType);
+            return _container.Resolve(serviceType);
         }
 
         public IEnumerable<object> GetServices(Type serviceType)
         {
-            return container.ResolveAll(serviceType);
+            return _container.ResolveAll(serviceType);
         }
 
         public static IDependencyResolver ConfigureAndGet(Action<IUnityContainer> configSteps)
         {
             UnityDependencyResolver instance = new UnityDependencyResolver();
-            configSteps(instance.container);
+            configSteps(instance._container);
             return instance;
 
         }

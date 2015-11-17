@@ -31,7 +31,7 @@ namespace WebForms.vNextinator
 #else
          public static Control LoadInjectedControl(this TemplateControl templateControl, string virtualPath)
         {
-             var ctrl = templateControl.LoadControl(virtualPath) as TemplateControl;
+            var ctrl = templateControl.LoadControl(virtualPath);
             var userControl = ctrl as TemplateControl;
             if (userControl != null)
             {

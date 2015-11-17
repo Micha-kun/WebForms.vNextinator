@@ -1,6 +1,5 @@
-﻿
+
 using Ninject;
-using SuperControlTest.Presenters;
 using System;
 using System.Collections.Generic;
 using WebForms.vNextinator;
@@ -9,12 +8,11 @@ namespace SuperControlTest.DI
 {
     public sealed class NinjectDependencyResolver : IDependencyResolver
     {
-        private StandardKernel _kernel;
+        private readonly StandardKernel _kernel;
 
-        public NinjectDependencyResolver()
+        private NinjectDependencyResolver()
         {
             _kernel = new StandardKernel();
-            AddBindings();
         }
 
         public object GetService(Type serviceType)
@@ -27,10 +25,11 @@ namespace SuperControlTest.DI
             return _kernel.GetAll(serviceType);
         }
 
-        private void AddBindings()
+        public static IDependencyResolver Build(Action<IKernel> setupAction)
         {
-            _kernel.Bind<IInjectionTest>().To<InjectionTest>();
-            _kernel.Bind<IDefaultPresenter>().To<DefaultPresenter>();
+            var resolver = new NinjectDependencyResolver();
+            setupAction(resolver._kernel);
+            return resolver;
         }
     }
 }

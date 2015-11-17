@@ -1,7 +1,8 @@
-﻿using Castle.MicroKernel.Registration;
+using Castle.MicroKernel.Registration;
 using SuperControlTest.DI;
 using System;
 using System.Web.Http;
+using SuperControlTest.Presenters;
 using WebForms.vNextinator;
 
 
@@ -22,7 +23,13 @@ namespace SuperControlTest
             });
 
             //Ninject depencency resolver
-            //    DependencyResolver.SetDependencyResolver(new NinjectDependencyResolver());
+            DependencyResolver.SetDependencyResolver(
+                NinjectDependencyResolver.Build(
+                    kernel =>
+                    {
+                        kernel.Bind<IInjectionTest>().To<InjectionTest>();
+                        kernel.Bind<IDefaultPresenter>().To<DefaultPresenter>();
+                    }));
 
             /* Unity dependency resolver. Allows to decouple configuration from Resolver. You can reuse UnityDependentyResolver
              * and configure it in each app without touching it.
@@ -33,10 +40,11 @@ namespace SuperControlTest
                 //and so on...
             })); */
 
-            DependencyResolver.SetDependencyResolver(WindsorDependencyResolver.ConfigureAndGet(container =>
-                  {
-                      container.Register(Component.For<IInjectionTest>().ImplementedBy<InjectionTest>());
-                  }));
+            // Windsor dependency resolver.
+            //DependencyResolver.SetDependencyResolver(WindsorDependencyResolver.ConfigureAndGet(container =>
+            //      {
+            //          container.Register(Component.For<IInjectionTest>().ImplementedBy<InjectionTest>());
+            //      }));
         }
     }
 }
