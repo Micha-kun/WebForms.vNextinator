@@ -7,6 +7,7 @@ using System.Web.Http;
 using System.Web.Security;
 using System.Web.SessionState;
 using WebForms.vNextinator;
+using Microsoft.Practices.Unity;
 
 namespace SuperControlTest
 {
@@ -29,7 +30,7 @@ namespace SuperControlTest
 
             /* Unity dependency resolver. Allows to decouple configuration from Resolver. You can reuse UnityDependentyResolver
              * and configure it in each app without touching it.
-            DependencyResolver.SetDependencyResolver(UnityDependencyResolver.configureAndGet(container =>
+            DependencyResolver.SetDependencyResolver(UnityDependencyResolver.ConfigureAndGet(container =>
             {
                 container.RegisterType<IInjectionTest, InjectionTest>();
                 // container.RegisterType<AnotherIface, AnotherClass>();

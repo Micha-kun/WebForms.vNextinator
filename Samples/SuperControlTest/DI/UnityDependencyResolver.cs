@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using WebForms.vNextinator;
+using Microsoft.Practices.Unity
+using Microsoft.Practices.Unity.Configuration
 
 namespace SuperControlTest.DI
 {
@@ -27,7 +29,7 @@ namespace SuperControlTest.DI
             return container.ResolveAll(serviceType);
         }
 
-        public static IDependencyResolver configureAndGet(Action<IUnityContainer> configSteps)
+        public static IDependencyResolver ConfigureAndGet(Action<IUnityContainer> configSteps)
         {
             UnityDependencyResolver instance = new UnityDependencyResolver();
             configSteps(instance.container);
