@@ -1,7 +1,6 @@
 ﻿using Castle.Windsor;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using WebForms.vNextinator;
 
 namespace SuperControlTest.DI
@@ -22,7 +21,7 @@ namespace SuperControlTest.DI
 
         public IEnumerable<object> GetServices(Type serviceType)
         {
-            return container.ResolveAll(serviceType).OfType<object>();
+            return (IEnumerable<object>)container.ResolveAll(serviceType);
         }
 
         public static IDependencyResolver ConfigureAndGet(Action<IWindsorContainer> configSteps)
