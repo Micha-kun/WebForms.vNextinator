@@ -12,7 +12,8 @@ namespace SuperControlTest.Controls
         {
         }
 
-        public SuperControl(InjectionTest test)
+        public SuperControl(IInjectionTest test)
+            : this()
         {
             Debug.Assert(test != null);
         }
@@ -36,6 +37,6 @@ namespace SuperControlTest.Controls
         }
 
         #endregion
-       
+
     }
 }
