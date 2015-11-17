@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using WebForms.vNextinator;
+using Microsoft.Practices.Unity
+using Microsoft.Practices.Unity.Configuration
 
 namespace SuperControlTest.DI
 {
