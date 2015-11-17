@@ -20,7 +20,8 @@ namespace SuperControlTest
         {
         }
 
-        public Default(IInjectionTest test) : this()
+        public Default(IInjectionTest test)
+            : this()
         {
             Debug.Assert(test != null);
         }
