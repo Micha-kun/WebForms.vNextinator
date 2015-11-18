@@ -11,7 +11,7 @@ let packagingDir = packagingRoot @@ "lib"
 let authors = ["Michael-Jorge Gómez Campos"]
 let projectName = "WebForms.vNextinator"
 let projectDescription= "The future of WebForms is here!!"
-let projectVersion = "0.4.0"
+let projectVersion = "0.4.1"
 let projectSummary = projectVersion
 
 // Targets
@@ -23,15 +23,19 @@ Target "CopyWebConfigTransform" (fun _ ->
     CopyFileIntoSubFolder buildDir "web.config.transform"
 )
 
+let generateAssemblyAttributes guid = 
+    [Attribute.Title projectName
+     Attribute.Description projectDescription
+     Attribute.Guid guid
+     Attribute.Product projectName
+     Attribute.Version projectVersion
+     Attribute.FileVersion projectVersion
+     Attribute.CLSCompliant true
+     Attribute.ComVisible false]
+
 Target "BuildNet20Project" (fun _ ->
-    CreateCSharpAssemblyInfo "Src/WebForms.vNextinator.Net20/Properties/AssemblyInfo.cs"
-        [Attribute.Title projectName
-         Attribute.Description projectDescription
-         Attribute.Guid "ab47c848-139c-4120-ad73-9570ba612160"
-         Attribute.Product projectName
-         Attribute.Version projectVersion
-         Attribute.FileVersion projectVersion
-         Attribute.CLSCompliant true]
+    generateAssemblyAttributes "ab47c848-139c-4120-ad73-9570ba612160" 
+        |> CreateCSharpAssemblyInfo "Src/WebForms.vNextinator.Net20/Properties/AssemblyInfo.cs"
 
     !! "Src/WebForms.vNextinator.Net20/*.csproj"
         |> MSBuildRelease (buildDir + "Net20/") "Build"
@@ -39,14 +43,9 @@ Target "BuildNet20Project" (fun _ ->
 )
 
 Target "BuildNet35Project" (fun _ ->
-    CreateCSharpAssemblyInfo "Src/WebForms.vNextinator.Net35/Properties/AssemblyInfo.cs"
-        [Attribute.Title projectName
-         Attribute.Description projectDescription
-         Attribute.Guid "16ab937c-58b7-41eb-806e-2101894d8bb3"
-         Attribute.Product projectName
-         Attribute.Version projectVersion
-         Attribute.FileVersion projectVersion
-         Attribute.CLSCompliant true]
+    generateAssemblyAttributes "16ab937c-58b7-41eb-806e-2101894d8bb3" 
+        |> CreateCSharpAssemblyInfo "Src/WebForms.vNextinator.Net35/Properties/AssemblyInfo.cs"
+                
 
     !! "Src/WebForms.vNextinator.Net35/*.csproj"
         |> MSBuildRelease (buildDir + "Net35/") "Build"
@@ -54,29 +53,17 @@ Target "BuildNet35Project" (fun _ ->
 )
 
 Target "BuildNet40Project" (fun _ ->
-    CreateCSharpAssemblyInfo "Src/WebForms.vNextinator.Net40/Properties/AssemblyInfo.cs"
-        [Attribute.Title projectName
-         Attribute.Description projectDescription
-         Attribute.Guid "c92237ff-8875-47f9-86ed-9c0c6cf6cca2"
-         Attribute.Product projectName
-         Attribute.Version projectVersion
-         Attribute.FileVersion projectVersion
-         Attribute.CLSCompliant true]
-
+    generateAssemblyAttributes "c92237ff-8875-47f9-86ed-9c0c6cf6cca2"
+        |> CreateCSharpAssemblyInfo "Src/WebForms.vNextinator.Net40/Properties/AssemblyInfo.cs"
+        
     !! "Src/WebForms.vNextinator.Net40/*.csproj"
         |> MSBuildRelease (buildDir + "Net40/") "Build"
         |> Log "AppBuild-Output: "
 )
 
 Target "BuildNet45Project" (fun _ ->
-    CreateCSharpAssemblyInfo "Src/WebForms.vNextinator.Net45/Properties/AssemblyInfo.cs"
-        [Attribute.Title projectName
-         Attribute.Description projectDescription
-         Attribute.Guid "1aa18ad4-ed25-4220-b504-e62104855800"
-         Attribute.Product projectName
-         Attribute.Version projectVersion
-         Attribute.FileVersion projectVersion
-         Attribute.CLSCompliant true]
+    generateAssemblyAttributes "1aa18ad4-ed25-4220-b504-e62104855800"
+    |> CreateCSharpAssemblyInfo "Src/WebForms.vNextinator.Net45/Properties/AssemblyInfo.cs"
 
     !! "Src/WebForms.vNextinator.Net45/*.csproj"
         |> MSBuildRelease (buildDir + "Net45/") "Build"
