@@ -21,6 +21,17 @@ namespace WebForms.vNextinator.Mvpvm
 
         protected TPresenter Presenter { get; private set; }
 
+        protected TViewModel ViewModel { get { return Presenter.ViewModel; } }
+
+        protected void ControlDataBind(object sender, EventArgs e)
+        {
+            var ctrl = sender as Control;
+            if (ctrl != null)
+            {
+                ctrl.DataBind();
+            }
+        }
+
         protected override void OnUnload(EventArgs e)
         {
             base.OnUnload(e);

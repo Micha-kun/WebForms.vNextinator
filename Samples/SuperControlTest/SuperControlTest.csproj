@@ -132,7 +132,8 @@
     <None Include="Scripts\jquery-1.11.3.intellisense.js" />
     <Content Include="Scripts\jquery-1.11.3.js" />
     <Content Include="Scripts\jquery-1.11.3.min.js" />
-    <Content Include="Views\Default.aspx" />
+    <Content Include="Views\Sample1.aspx" />
+    <Content Include="Views\Sample2.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -160,12 +161,19 @@
     <Compile Include="Presenters\IDefaultPresenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\DefaultViewModel.cs" />
-    <Compile Include="Views\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Views\Sample1.aspx.cs">
+      <DependentUpon>Sample1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Views\Sample1.aspx.designer.cs">
+      <DependentUpon>Sample1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sample2.aspx.cs">
+      <DependentUpon>Sample2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Sample2.aspx.designer.cs">
+      <DependentUpon>Sample2.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

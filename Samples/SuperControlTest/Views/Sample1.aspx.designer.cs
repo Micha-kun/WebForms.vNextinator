@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SuperControlTest.Views {
-    
-    
-    public partial class Default {
-        
+
+namespace SuperControlTest.Views
+{
+
+    public partial class Sample1
+    {
+
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace SuperControlTest.Views {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
+
         /// <summary>
         /// LblCurrentDateTime control.
         /// </summary>

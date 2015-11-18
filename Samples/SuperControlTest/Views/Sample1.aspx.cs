@@ -5,13 +5,13 @@ using WebForms.vNextinator.Mvpvm;
 
 namespace SuperControlTest.Views
 {
-    public partial class Default : PageView<IDefaultPresenter, DefaultViewModel>
+    public partial class Sample1 : PageView<IDefaultPresenter, DefaultViewModel>
     {
-        public Default()
+        public Sample1()
         {
         }
 
-        public Default(IDefaultPresenter presenter) : base(presenter)
+        public Sample1(IDefaultPresenter presenter) : base(presenter)
         {
         }
 
@@ -24,13 +24,13 @@ namespace SuperControlTest.Views
         [PropertyChangedHandler("Title")]
         public void SetTitle()
         {
-            Title = Presenter.ViewModel.Title;
+            Title = ViewModel.Title;
         }
 
         [PropertyChangedHandler("CurrentDateTime")]
         public void SetFormattedDateTime()
         {
-            LblCurrentDateTime.Text = Presenter.ViewModel.CurrentDateTime.ToString();
+            LblCurrentDateTime.Text = ViewModel.CurrentDateTime.ToString();
         }
     }
 }
