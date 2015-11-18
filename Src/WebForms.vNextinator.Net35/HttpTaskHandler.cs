@@ -15,10 +15,7 @@ namespace WebForms.vNextinator
 
         public bool IsReusable
         {
-            get
-            {
-                return _isReusable;
-            }
+            get { return _isReusable; }
         }
 
         public void ProcessRequest(HttpContext context)
