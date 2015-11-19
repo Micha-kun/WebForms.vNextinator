@@ -5,4 +5,4 @@ What will you find in this amazing lib? Helpers! Controls! Dependency Injection!
 
 See our sample app for usages of this great lib!
 
-Current version: v0.4.0
+Current version: v0.4.1
