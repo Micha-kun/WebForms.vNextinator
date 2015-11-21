@@ -1,7 +1,7 @@
 using Castle.Windsor;
 using System;
 using System.Collections.Generic;
-using WebForms.vNextinator;
+using WebForms.vNextinator.DI;
 
 namespace SuperControlTest.DI
 {

@@ -41,10 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ControlFinder.cs" />
-    <Compile Include="DefaultDependencyResolver.cs" />
-    <Compile Include="DependencyInjectionModule.cs" />
-    <Compile Include="DependencyResolver.cs" />
-    <Compile Include="IDependencyResolver.cs" />
+    <Compile Include="DI\DefaultDependencyResolver.cs" />
+    <Compile Include="DI\DependencyInjectionModule.cs" />
+    <Compile Include="DI\DependencyResolver.cs" />
+    <Compile Include="DI\IDependencyResolver.cs" />
     <Compile Include="Mvpvm\IPresenter.cs" />
     <Compile Include="Mvpvm\IViewModel.cs" />
     <Compile Include="Mvpvm\MasterPageView.cs">
@@ -62,7 +62,7 @@
     <Compile Include="Mvpvm\ViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SystemHelpers.cs" />
-    <Compile Include="TemplateClassDependencyInjector.cs" />
+    <Compile Include="DI\TemplateClassDependencyInjector.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

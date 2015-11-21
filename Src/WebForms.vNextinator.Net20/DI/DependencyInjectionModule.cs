@@ -4,7 +4,7 @@ using System.Reflection;
 using System.Web;
 using System.Web.UI;
 
-namespace WebForms.vNextinator
+namespace WebForms.vNextinator.DI
 {
     public class DependencyInjectionModule : IHttpModule
     {

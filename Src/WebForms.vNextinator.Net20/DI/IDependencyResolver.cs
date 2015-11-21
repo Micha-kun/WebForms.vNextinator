@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace WebForms.vNextinator
+namespace WebForms.vNextinator.DI
 {
     public interface IDependencyResolver
     {

@@ -52,17 +52,20 @@
     <Compile Include="..\WebForms.vNextinator.Net20\ControlFinder.cs">
       <Link>ControlFinder.cs</Link>
     </Compile>
-    <Compile Include="..\WebForms.vNextinator.Net20\DefaultDependencyResolver.cs">
-      <Link>DefaultDependencyResolver.cs</Link>
+    <Compile Include="..\WebForms.vNextinator.Net20\DI\DefaultDependencyResolver.cs">
+      <Link>DI\DefaultDependencyResolver.cs</Link>
     </Compile>
-    <Compile Include="..\WebForms.vNextinator.Net20\DependencyInjectionModule.cs">
-      <Link>DependencyInjectionModule.cs</Link>
+    <Compile Include="..\WebForms.vNextinator.Net20\DI\DependencyInjectionModule.cs">
+      <Link>DI\DependencyInjectionModule.cs</Link>
     </Compile>
-    <Compile Include="..\WebForms.vNextinator.Net20\DependencyResolver.cs">
-      <Link>DependencyResolver.cs</Link>
+    <Compile Include="..\WebForms.vNextinator.Net20\DI\DependencyResolver.cs">
+      <Link>DI\DependencyResolver.cs</Link>
     </Compile>
-    <Compile Include="..\WebForms.vNextinator.Net20\IDependencyResolver.cs">
-      <Link>IDependencyResolver.cs</Link>
+    <Compile Include="..\WebForms.vNextinator.Net20\DI\IDependencyResolver.cs">
+      <Link>DI\IDependencyResolver.cs</Link>
+    </Compile>
+    <Compile Include="..\WebForms.vNextinator.Net20\DI\TemplateClassDependencyInjector.cs">
+      <Link>DI\TemplateClassDependencyInjector.cs</Link>
     </Compile>
     <Compile Include="..\WebForms.vNextinator.Net20\Mvpvm\IPresenter.cs">
       <Link>Mvpvm\IPresenter.cs</Link>
@@ -93,9 +96,6 @@
     </Compile>
     <Compile Include="..\WebForms.vNextinator.Net20\Mvpvm\ViewModel.cs">
       <Link>Mvpvm\ViewModel.cs</Link>
-    </Compile>
-    <Compile Include="..\WebForms.vNextinator.Net20\TemplateClassDependencyInjector.cs">
-      <Link>TemplateClassDependencyInjector.cs</Link>
     </Compile>
     <Compile Include="HttpTaskHandler.cs" />
     <Compile Include="PageDataSource.cs" />

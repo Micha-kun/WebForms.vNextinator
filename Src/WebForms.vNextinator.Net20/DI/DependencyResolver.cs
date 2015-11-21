@@ -1,6 +1,6 @@
 using System.Web.UI;
 
-namespace WebForms.vNextinator
+namespace WebForms.vNextinator.DI
 {
     public static class DependencyResolver
     {

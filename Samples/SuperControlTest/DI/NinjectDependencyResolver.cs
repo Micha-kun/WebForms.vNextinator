@@ -2,7 +2,7 @@
 using Ninject;
 using System;
 using System.Collections.Generic;
-using WebForms.vNextinator;
+using WebForms.vNextinator.DI;
 
 namespace SuperControlTest.DI
 {

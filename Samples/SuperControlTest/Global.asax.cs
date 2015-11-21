@@ -3,7 +3,7 @@ using SuperControlTest.DI;
 using System;
 using System.Web.Http;
 using SuperControlTest.Presenters;
-using WebForms.vNextinator;
+using WebForms.vNextinator.DI;
 
 
 namespace SuperControlTest
