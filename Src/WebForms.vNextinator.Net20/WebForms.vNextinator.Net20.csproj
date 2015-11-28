@@ -45,6 +45,7 @@
     <Compile Include="DI\DependencyInjectionModule.cs" />
     <Compile Include="DI\DependencyResolver.cs" />
     <Compile Include="DI\IDependencyResolver.cs" />
+    <Compile Include="Mvpvm\InfoCallerAttributes.cs" />
     <Compile Include="Mvpvm\IPresenter.cs" />
     <Compile Include="Mvpvm\IViewModel.cs" />
     <Compile Include="Mvpvm\MasterPageView.cs">

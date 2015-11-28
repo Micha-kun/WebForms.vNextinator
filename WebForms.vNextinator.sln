@@ -28,8 +28,16 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Net45", "Net45", "{EE59B510-9109-44B1-B63F-8B35D9642676}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{3702D721-F5C3-43F7-88A7-58A48EC857C7}"
+	ProjectSection(SolutionItems) = preProject
+		WebForms.vNextinator.nuspec = WebForms.vNextinator.nuspec
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperControlTest", "Samples\SuperControlTest\SuperControlTest.csproj", "{CA994DD9-3CC7-43C4-AFCA-21B827BE5E94}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A38573BE-6329-4370-9826-0FA9773E091E}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

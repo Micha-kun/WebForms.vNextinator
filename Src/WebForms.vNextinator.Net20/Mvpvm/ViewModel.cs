@@ -1,5 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.Runtime.CompilerServices;
+
+#if HAVE_EXPRESSION_LAMBDAS
+using System.Linq.Expressions;
+#endif
 
 namespace WebForms.vNextinator.Mvpvm
 {
@@ -16,7 +22,7 @@ namespace WebForms.vNextinator.Mvpvm
             }
         }
 
-        protected bool SetField<T>(ref T field, T value, string propertyName = "")
+        protected bool SetField<T>(ref T field, T value, [CallerMemberName] string propertyName = "")
         {
             if (EqualityComparer<T>.Default.Equals(field, value))
             {
@@ -24,8 +30,30 @@ namespace WebForms.vNextinator.Mvpvm
             }
 
             field = value;
-            this.OnPropertyChanged(propertyName);
+            if (!string.IsNullOrEmpty(propertyName))
+            {
+                this.OnPropertyChanged(propertyName);
+            }
+
             return true;
         }
+
+#if HAVE_EXPRESSION_LAMBDAS
+        protected bool SetField<T>(ref T field, T value, Expression<Func<T>> propertyExpression)
+        {
+            return SetField(ref field, value, GetPropertyName(propertyExpression));
+        }
+
+        private string GetPropertyName<T>(Expression<Func<T>> propertyExpression)
+        {
+            var member = propertyExpression.Body as MemberExpression;
+            if (member == null)
+            {
+                return null;
+            }
+
+            return member.Member.Name;
+        }
+#endif
     }
 }

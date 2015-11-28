@@ -17,7 +17,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;HAVE_EXTENSION_METHODS;HAVE_TASKS</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;CODE_ANALYSIS;HAVE_EXTENSION_METHODS;HAVE_TASKS;HAVE_EXPRESSION_LAMBDAS</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
@@ -62,6 +62,9 @@
     </Compile>
     <Compile Include="..\WebForms.vNextinator.Net20\DI\TemplateClassDependencyInjector.cs">
       <Link>DI\TemplateClassDependencyInjector.cs</Link>
+    </Compile>
+    <Compile Include="..\WebForms.vNextinator.Net20\Mvpvm\InfoCallerAttributes.cs">
+      <Link>Mvpvm\InfoCallerAttributes.cs</Link>
     </Compile>
     <Compile Include="..\WebForms.vNextinator.Net20\Mvpvm\IPresenter.cs">
       <Link>Mvpvm\IPresenter.cs</Link>

@@ -17,7 +17,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;HAVE_EXTENSION_METHODS;HAVE_TASKS;HAVE_ASYNC_AWAIT</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;CODE_ANALYSIS;HAVE_EXTENSION_METHODS;HAVE_TASKS;HAVE_ASYNC_AWAIT;HAVE_EXPRESSION_LAMBDAS;HAVE_CALLER_INFO_ATTRIBUTES</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>

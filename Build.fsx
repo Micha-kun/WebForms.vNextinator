@@ -11,7 +11,7 @@ let packagingDir = packagingRoot @@ "lib"
 let authors = ["Michael-Jorge Gómez Campos"]
 let projectName = "WebForms.vNextinator"
 let projectDescription= "The future of WebForms is here!!"
-let projectVersion = "0.4.1"
+let projectVersion = "0.4.2"
 let projectSummary = projectVersion
 
 // Targets

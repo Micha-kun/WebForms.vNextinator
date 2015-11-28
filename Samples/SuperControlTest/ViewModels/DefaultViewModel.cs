@@ -12,13 +12,13 @@ namespace SuperControlTest.ViewModels
         public string Title
         {
             get { return title; }
-            set { SetField(ref title, value, "Title"); }
+            set { SetField(ref title, value); }
         }
 
         public DateTime CurrentDateTime
         {
             get { return currentDateTime; }
-            set { SetField(ref currentDateTime, value, "CurrentDateTime"); }
+            set { SetField(ref currentDateTime, value); }
         }
     }
 }
