@@ -29,6 +29,7 @@ namespace SuperControlTest
                     {
                         kernel.Bind<IInjectionTest>().To<InjectionTest>();
                         kernel.Bind<IDefaultPresenter>().To<DefaultPresenter>();
+                        kernel.Bind<ISample3Presenter>().To<Sample3Presenter>();
                     }));
 
             /* Unity dependency resolver. Allows to decouple configuration from Resolver. You can reuse UnityDependentyResolver
