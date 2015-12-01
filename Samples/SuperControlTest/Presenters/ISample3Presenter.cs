@@ -1,15 +1,15 @@
-﻿
-using SuperControlTest.ViewModels;
+﻿using SuperControlTest.ViewModels;
+using SuperControlTest.Views;
 using WebForms.vNextinator.Mvpvm;
 
 namespace SuperControlTest.Presenters
 {
-    public interface ISample3Presenter : IPresenter<Sample3ViewModel>
+    public interface ISample3Presenter : IPresenter<ISample3ViewModel>
     {
         void Init();
 
-        void SetNewTitle(string newTitle);
+        void Init(ISample3View view);
 
-        void SetNewLabelToShow(string newLabelToShow);
+        void SetNewValues();
     }
 }

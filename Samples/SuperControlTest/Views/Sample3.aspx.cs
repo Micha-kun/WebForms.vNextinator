@@ -5,7 +5,7 @@ using WebForms.vNextinator.Mvpvm;
 
 namespace SuperControlTest.Views
 {
-    public partial class Sample3 : PageView<ISample3Presenter, Sample3ViewModel>
+    public partial class Sample3 : PageView<ISample3Presenter, ISample3ViewModel>, ISample3View
     {
         public Sample3()
         {
@@ -19,22 +19,30 @@ namespace SuperControlTest.Views
         protected override void OnPreInit(EventArgs e)
         {
             base.OnPreInit(e);
-            this.Presenter.Init();
-            txbNewTitle.TextChanged += TxbNewTitle_TextChanged;
-            txbNewLabelToShow.TextChanged += TxbNewLabelToShow_TextChanged;
+            if (!this.IsPostBack) { this.Presenter.Init(); }
+            btnSetNewValues.Click += BtnSetNewValues_Click;
         }
 
-        void TxbNewLabelToShow_TextChanged(object sender, EventArgs e)
+        void BtnSetNewValues_Click(object sender, EventArgs e)
         {
-            Presenter.SetNewLabelToShow(txbNewLabelToShow.Text);
+            Presenter.SetNewValues();
         }
 
-        void TxbNewTitle_TextChanged(object sender, EventArgs e)
+        protected override void OnLoad(EventArgs e)
         {
-            Presenter.SetNewTitle(txbNewTitle.Text);
+            base.OnInitComplete(e);
+            if (this.IsPostBack) { this.Presenter.Init(this); }
+
         }
 
-
+        public string TitleView
+        {
+            get { return txbNewTitle.Text; }
+        }
+        public string MutableLabelView
+        {
+            get { return txbNewLabelToShow.Text; }
+        }
 
     }
 }

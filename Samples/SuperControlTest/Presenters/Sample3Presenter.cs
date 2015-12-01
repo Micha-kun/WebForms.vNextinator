@@ -1,12 +1,13 @@
 ﻿using SuperControlTest.ViewModels;
+using SuperControlTest.Views;
 using System;
 using WebForms.vNextinator.Mvpvm;
 
 namespace SuperControlTest.Presenters
 {
-    public class Sample3Presenter : Presenter<Sample3ViewModel>, ISample3Presenter
+    public class Sample3Presenter : Presenter<ISample3ViewModel>, ISample3Presenter
     {
-        public Sample3Presenter(Sample3ViewModel viewModel)
+        public Sample3Presenter(ISample3ViewModel viewModel)
             : base(viewModel)
         {
         }
@@ -18,16 +19,17 @@ namespace SuperControlTest.Presenters
             ViewModel.CurrentDateTime = DateTime.Now;
         }
 
-        public void SetNewTitle(string newTitle)
+        public void Init(ISample3View view)
         {
-            //Do bizness here
-            ViewModel.Title = newTitle;
+            ViewModel.Title = view.TitleView;
+            ViewModel.LabelToShow = view.MutableLabelView;
+            ViewModel.CurrentDateTime = DateTime.Now;
         }
 
-        public void SetNewLabelToShow(string newLabelToShow)
+        public void SetNewValues()
         {
             //Do bizness here
-            ViewModel.LabelToShow = newLabelToShow;
+            if (ViewModel.Title == "#") { ViewModel.LabelToShow = "Presenter has modified this value because Tile is #"; }
         }
     }
 }

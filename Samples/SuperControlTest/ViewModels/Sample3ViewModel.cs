@@ -3,7 +3,7 @@ using WebForms.vNextinator.Mvpvm;
 
 namespace SuperControlTest.ViewModels
 {
-    public class Sample3ViewModel : ViewModel
+    public class Sample3ViewModel : ViewModel, SuperControlTest.ViewModels.ISample3ViewModel
     {
         private string title;
         private string label;

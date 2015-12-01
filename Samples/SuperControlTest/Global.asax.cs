@@ -1,8 +1,8 @@
-using Castle.MicroKernel.Registration;
 using SuperControlTest.DI;
+using SuperControlTest.Presenters;
+using SuperControlTest.ViewModels;
 using System;
 using System.Web.Http;
-using SuperControlTest.Presenters;
 using WebForms.vNextinator.DI;
 
 
@@ -29,6 +29,7 @@ namespace SuperControlTest
                     {
                         kernel.Bind<IInjectionTest>().To<InjectionTest>();
                         kernel.Bind<IDefaultPresenter>().To<DefaultPresenter>();
+                        kernel.Bind<ISample3ViewModel>().To<Sample3ViewModel>();
                         kernel.Bind<ISample3Presenter>().To<Sample3Presenter>();
                     }));
 
