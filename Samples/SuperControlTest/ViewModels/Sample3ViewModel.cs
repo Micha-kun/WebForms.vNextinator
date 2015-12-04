@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using WebForms.vNextinator.Mvpvm;
 
 namespace SuperControlTest.ViewModels
@@ -9,12 +10,14 @@ namespace SuperControlTest.ViewModels
         private string label;
         private DateTime currentDateTime;
 
+        [Required(AllowEmptyStrings = false, ErrorMessage = "Title can not be empty.")]
+        [StringLength(20, ErrorMessage = "Title length can not be longer than 20.")]
         public string Title
         {
             get { return title; }
             set
             {
-                if (string.IsNullOrEmpty(value.Trim())) { value = "Default Title by ViewModel"; }
+                value = value.Trim();
                 SetField(ref title, value);
             }
         }
@@ -24,7 +27,8 @@ namespace SuperControlTest.ViewModels
             get { return label; }
             set
             {
-                if (string.IsNullOrEmpty(value.Trim())) { value = "Default label by ViewModel"; }
+                value = value.Trim();
+                if (string.IsNullOrEmpty(value)) { value = "Default label by ViewModel"; }
                 SetField(ref label, value);
             }
         }

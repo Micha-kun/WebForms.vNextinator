@@ -1,6 +1,7 @@
 ﻿using SuperControlTest.ViewModels;
 using SuperControlTest.Views;
 using System;
+using System.ComponentModel.DataAnnotations;
 using WebForms.vNextinator.Mvpvm;
 
 namespace SuperControlTest.Presenters
@@ -24,6 +25,8 @@ namespace SuperControlTest.Presenters
             ViewModel.Title = view.TitleView;
             ViewModel.LabelToShow = view.MutableLabelView;
             ViewModel.CurrentDateTime = DateTime.Now;
+            Validator.ValidateObject(ViewModel, new ValidationContext(ViewModel), true);
+
         }
 
         public void SetNewValues()
