@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{284A72CE-7936-4A3C-8B01-F27B532F7425}"
 	ProjectSection(SolutionItems) = preProject
@@ -28,9 +28,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Net45", "Net45", "{EE59B510-9109-44B1-B63F-8B35D9642676}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{3702D721-F5C3-43F7-88A7-58A48EC857C7}"
-	ProjectSection(SolutionItems) = preProject
-		WebForms.vNextinator.nuspec = WebForms.vNextinator.nuspec
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperControlTest", "Samples\SuperControlTest\SuperControlTest.csproj", "{CA994DD9-3CC7-43C4-AFCA-21B827BE5E94}"
 EndProject
