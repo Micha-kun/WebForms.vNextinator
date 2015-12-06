@@ -134,6 +134,7 @@
     <Content Include="Scripts\jquery-1.11.3.min.js" />
     <Content Include="Views\Sample1.aspx" />
     <Content Include="Views\Sample2.aspx" />
+    <Content Include="Views\Sample3.aspx" />
     <Content Include="Views\ToDoList.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -159,12 +160,17 @@
     </Compile>
     <Compile Include="Presenters\DefaultPresenter.cs" />
     <Compile Include="Presenters\IDefaultPresenter.cs" />
+    <Compile Include="Presenters\ISample3Presenter.cs" />
     <Compile Include="Presenters\IToDoListPresenter.cs" />
+    <Compile Include="Presenters\Sample3Presenter.cs" />
     <Compile Include="Presenters\ToDoListPresenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\DefaultViewModel.cs" />
+    <Compile Include="ViewModels\ISample3ViewModel.cs" />
+    <Compile Include="ViewModels\Sample3ViewModel.cs" />
     <Compile Include="ViewModels\ToDoListItem.cs" />
     <Compile Include="ViewModels\ToDoListViewModel.cs" />
+    <Compile Include="Views\ISample3View.cs" />
     <Compile Include="Views\Sample1.aspx.cs">
       <DependentUpon>Sample1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -178,6 +184,13 @@
     </Compile>
     <Compile Include="Views\Sample2.aspx.designer.cs">
       <DependentUpon>Sample2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sample3.aspx.cs">
+      <DependentUpon>Sample3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Sample3.aspx.designer.cs">
+      <DependentUpon>Sample3.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\ToDoList.aspx.cs">
       <DependentUpon>ToDoList.aspx</DependentUpon>

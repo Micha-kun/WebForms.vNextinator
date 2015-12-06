@@ -31,6 +31,7 @@ namespace SuperControlTest
                         kernel.Bind<IDefaultPresenter>().To<DefaultPresenter>();
                         kernel.Bind<ISample3ViewModel>().To<Sample3ViewModel>();
                         kernel.Bind<ISample3Presenter>().To<Sample3Presenter>();
+                        kernel.Bind<IToDoListPresenter>().To<ToDoListPresenter>();
                     }));
 
             /* Unity dependency resolver. Allows to decouple configuration from Resolver. You can reuse UnityDependentyResolver

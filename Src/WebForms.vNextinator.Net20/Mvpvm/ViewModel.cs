@@ -9,8 +9,10 @@ using System.Linq.Expressions;
 
 namespace WebForms.vNextinator.Mvpvm
 {
+    [Serializable]
     public abstract class ViewModel : IViewModel
     {
+        [field: NonSerialized]
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected virtual void OnPropertyChanged(string propertyName)

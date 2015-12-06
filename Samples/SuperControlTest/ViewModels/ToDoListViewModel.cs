@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using WebForms.vNextinator.Mvpvm;
 
@@ -7,17 +8,17 @@ namespace SuperControlTest.ViewModels
     [Serializable]
     public class ToDoListViewModel : ViewModel
     {
-        private ObservableCollection<ToDoListItem> _items;
+        private List<ToDoListItem> _items;
 
         public ToDoListViewModel()
         {
-            _items = new ObservableCollection<ToDoListItem>();
+            _items = new List<ToDoListItem>();
         }
 
-        public ObservableCollection<ToDoListItem> Items
+        public List<ToDoListItem> Items
         {
             get { return _items; }
-            set { SetField<ObservableCollection<ToDoListItem>>(ref _items, value); }
+            set { SetField<List<ToDoListItem>>(ref _items, value); }
         }
     }
 }
