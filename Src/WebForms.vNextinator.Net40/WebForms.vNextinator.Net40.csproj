@@ -106,6 +106,7 @@
       <Link>ScriptUserControl.cs</Link>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="PageAsyncTaskHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
