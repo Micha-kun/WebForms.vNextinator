@@ -11,8 +11,12 @@ let packagingDir = packagingRoot @@ "lib"
 let authors = ["Michael-Jorge Gómez Campos"]
 let projectName = "WebForms.vNextinator"
 let projectDescription= "The future of WebForms is here!!"
-let projectVersion = "0.4.3"
-let projectSummary = """.Net 4.0: Added PageAsyncTask creation helpers."""
+let projectVersion = "0.4.3.1"
+let projectSummary = """.Net 3.5: 
+- Added PageAsyncTask creation helpers.
+
+.Net 4.0:
+- Added PageAsyncTask creation helpers."""
 
 // Targets
 Target "BuildClean" (fun _ -> 

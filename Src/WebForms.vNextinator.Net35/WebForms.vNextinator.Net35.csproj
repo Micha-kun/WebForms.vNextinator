@@ -101,6 +101,7 @@
       <Link>Mvpvm\ViewModel.cs</Link>
     </Compile>
     <Compile Include="HttpTaskHandler.cs" />
+    <Compile Include="PageAsyncTaskHelper.cs" />
     <Compile Include="PageDataSource.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ScriptUserControl.cs">
