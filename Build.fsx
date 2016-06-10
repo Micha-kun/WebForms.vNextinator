@@ -11,12 +11,13 @@ let packagingDir = packagingRoot @@ "lib"
 let authors = ["Michael-Jorge Gómez Campos"]
 let projectName = "WebForms.vNextinator"
 let projectDescription= "The future of WebForms is here!!"
-let projectVersion = "0.4.3.1"
-let projectSummary = """.Net 3.5: 
-- Added PageAsyncTask creation helpers.
+let projectVersion = "0.4.4.0"
+let projectSummary = """
+Global:
+- Some fixes.
 
-.Net 4.0:
-- Added PageAsyncTask creation helpers."""
+.Net 4.6: 
+- Added version."""
 
 // Targets
 Target "BuildClean" (fun _ -> 
@@ -74,6 +75,15 @@ Target "BuildNet45Project" (fun _ ->
         |> Log "AppBuild-Output: "
 )
 
+Target "BuildNet46Project" (fun _ ->
+    generateAssemblyAttributes "71d02e20-938e-415a-ae0c-7bf5c57299dd"
+    |> CreateCSharpAssemblyInfo "Src/WebForms.vNextinator.Net46/Properties/AssemblyInfo.cs"
+
+    !! "Src/WebForms.vNextinator.Net46/*.csproj"
+        |> MSBuildRelease (buildDir + "Net46/") "Build"
+        |> Log "AppBuild-Output: "
+)
+
 Target "CreatePackage" (fun _ ->
     NuGet (fun p -> 
         {p with
@@ -103,6 +113,8 @@ Target "CreatePackage" (fun _ ->
                  ("Net40/WebForms.vNextinator.PDB", Some "lib/net40/WebForms.vNextinator.PDB", None)
                  ("Net45/WebForms.vNextinator.dll", Some "lib/net45/WebForms.vNextinator.dll", None)
                  ("Net45/WebForms.vNextinator.PDB", Some "lib/net45/WebForms.vNextinator.PDB", None)
+                 ("Net46/WebForms.vNextinator.dll", Some "lib/net46/WebForms.vNextinator.dll", None)
+                 ("Net46/WebForms.vNextinator.PDB", Some "lib/net46/WebForms.vNextinator.PDB", None)
                  ("web.config.transform", Some "content/web.config.transform", None)]
         })
             "WebForms.vNextinator.nuspec"
@@ -119,6 +131,7 @@ Target "Default" (fun _ ->
   ==> "BuildNet35Project"
   ==> "BuildNet40Project"
   ==> "BuildNet45Project"
+  ==> "BuildNet46Project"
   ==> "CreatePackage"
   ==> "Default"
 

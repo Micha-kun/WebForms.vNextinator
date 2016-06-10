@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 
 [assembly: AssemblyTitleAttribute("WebForms.vNextinator")]
 [assembly: AssemblyDescriptionAttribute("The future of WebForms is here!!")]
-[assembly: GuidAttribute("c92237ff-8875-47f9-86ed-9c0c6cf6cca2")]
+[assembly: GuidAttribute("71d02e20-938e-415a-ae0c-7bf5c57299dd")]
 [assembly: AssemblyProductAttribute("WebForms.vNextinator")]
 [assembly: AssemblyVersionAttribute("0.4.4.0")]
 [assembly: AssemblyFileVersionAttribute("0.4.4.0")]

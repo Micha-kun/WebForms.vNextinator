@@ -27,7 +27,7 @@
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE;HAVE_EXTENSION_METHODS</DefineConstants>
+    <DefineConstants>TRACE;CODE_ANALYSIS;HAVE_EXTENSION_METHODS;HAVE_EXPRESSION_LAMBDAS</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
